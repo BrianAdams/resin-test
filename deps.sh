@@ -2,7 +2,7 @@
 
 exp_repo_rcnee_jessie_nodejs=enable
 wfile=/etc/apt/sources.list.d/rcn-jessie.list
-deb_distribution=jessie
+deb_distribution=debian
 
 if [ "x${exp_repo_rcnee_jessie_nodejs}" = "xenable" ] ; then
   echo "#" >> ${wfile}
@@ -57,6 +57,6 @@ openrov-ino \
 openrov-avrdude"
 
 apt-get update
-apt-get install -y deb_include
-apt-get install -y deb_additional_pkgs
-apt-get install -y repo_external_pkg_list
+apt-get install -y $deb_include
+apt-get install -y $deb_additional_pkgs
+apt-get install -y $repo_external_pkg_list
