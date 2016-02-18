@@ -5,17 +5,20 @@ ENV INITSYSTEM on
 #RUN apt-get update && apt-get install -y git
 RUN sed -i 's|#deb http://ftp.debian.org/debian jessie-backports|deb http://ftp.debian.org/debian jessie-backports|g'  /etc/apt/sources.list
 COPY . /app
-RUN sudo /app/deps.sh
-#RUN wget -O - -q http://deb-repo.openrov.com/build.openrov.com.gpg.key | apt-key add -
+WORKDIR /app
+RUN wget -O - -q http://deb-repo.openrov.com/build.openrov.com.gpg.key | apt-key add -
+RUN sudo ./deps.sh
 #RUN apt-get update && apt-get install -y openrov-rov-suite
 RUN mkdir -p /opt/openrov
-WORKDIR /opt/openrov
-RUN git clone https://github.com/openrov/openrov-software-arduino arduino
-RUN git clone https://github.com/openrov/openrov-cockpit cockpit && cd cockpit && npm install && cd src/static
-WORKDIR /opt/openrov
-RUN git clone https://github.com/openrov/openrov-dashboard dashboard && cd dashboard && npm install
-WORKDIR /opt/openrov
-RUN git clone https://github.com/openrov/openrov-proxy proxy && cd proxy/proxy-via-browser && npm install
+RUN ./OpenROV-development-jessie.sh
+
+#WORKDIR /opt/openrov
+#RUN git clone https://github.com/openrov/openrov-software-arduino arduino
+#RUN git clone https://github.com/openrov/openrov-cockpit cockpit && cd cockpit && npm install && cd src/static
+#WORKDIR /opt/openrov
+#RUN git clone https://github.com/openrov/openrov-dashboard dashboard && cd dashboard && npm install
+#WORKDIR /opt/openrov
+#RUN git clone https://github.com/openrov/openrov-proxy proxy && cd proxy/proxy-via-browser && npm install
 
 
 CMD ["/bin/bash", "start.sh"]

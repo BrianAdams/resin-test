@@ -3,6 +3,10 @@
 #/etc/init.d/openrov-proxy start
 #/etc/init.d/dashboard start
 
-node /opt/openrov/cockpit/src/app.js &
-node /opt/openrov/dashboard/src/app.js &
-node /opt/openrov/proxy/proxy-via-browser/index/js &
+#node /opt/openrov/cockpit/src/app.js &
+#node /opt/openrov/dashboard/src/app.js &
+#node /opt/openrov/proxy/proxy-via-browser/index/js &
+
+systemctl start orov-proxy
+systemctl start orov-cockpit
+systemctl start orov-dashboard
