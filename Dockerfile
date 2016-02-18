@@ -11,6 +11,7 @@ RUN sudo ./deps.sh
 #RUN apt-get update && apt-get install -y openrov-rov-suite
 RUN mkdir -p /opt/openrov
 RUN ls /app
+RUN mkdir -p /opt/source
 RUN /app/OpenROV-development-jessie.sh
 
 #WORKDIR /opt/openrov
