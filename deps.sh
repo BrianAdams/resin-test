@@ -45,7 +45,8 @@ curl \
 nodejs \
 device-tree-compiler \
 v4l-utils \
-avahi-daemon"
+avahi-daemon \
+apt-utils"
 
 deb_additional_pkgs="bmap-tools lsb-release pastebinit python-dbus systemd-sysv \
 bison build-essential flex make samba \

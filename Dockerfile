@@ -10,7 +10,8 @@ RUN wget -O - -q http://deb-repo.openrov.com/build.openrov.com.gpg.key | apt-key
 RUN sudo ./deps.sh
 #RUN apt-get update && apt-get install -y openrov-rov-suite
 RUN mkdir -p /opt/openrov
-RUN ./OpenROV-development-jessie.sh
+RUN ls /app
+RUN /app/OpenROV-development-jessie.sh
 
 #WORKDIR /opt/openrov
 #RUN git clone https://github.com/openrov/openrov-software-arduino arduino
