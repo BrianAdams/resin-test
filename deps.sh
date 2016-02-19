@@ -21,7 +21,7 @@ fbset file git-core hdparm hexedit hostapd i2c-tools initramfs-tools linux-base 
 locales lowpan-tools lshw memtester nano openssh-server patch ppp read-edid \
 rsync sudo systemd usb-modeswitch usbutils wget wireless-regdb wireless-tools \
 wpasupplicant wvdial firmware-atheros firmware-brcm80211 firmware-libertas firmware-ralink \
-firmware-realtek firmware-ti-connectivity firmware-zd1211 \
+firmware-realtek firmware-ti-connectivity  \
 nginx-light \
 python-software-properties \
 python-configobj \
