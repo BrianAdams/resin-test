@@ -301,7 +301,7 @@ is_this_qemu
 #setup_desktop
 
 #install_gem_pkgs
-
+install_node_pkgs
 #install_pip_pkgs
 if [ -f /usr/bin/git ] ; then
 	git config --global user.email "${rfs_username}@example.com"
@@ -310,8 +310,6 @@ if [ -f /usr/bin/git ] ; then
 	git config --global --unset-all user.email
 	git config --global --unset-all user.name
 fi
-
-install_node_pkgs
 #install_build_pkgs
 #other_source_links
 #unsecure_root

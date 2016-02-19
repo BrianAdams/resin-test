@@ -12,6 +12,7 @@ RUN sudo ./deps.sh
 RUN mkdir -p /opt/openrov
 RUN ls /app
 RUN mkdir -p /opt/source
+RUN useradd rov -m -s /bin/bash -g admin && echo rov:OpenROV | OpenROV
 RUN /app/OpenROV-development-jessie.sh
 
 #WORKDIR /opt/openrov
@@ -22,5 +23,5 @@ RUN /app/OpenROV-development-jessie.sh
 #WORKDIR /opt/openrov
 #RUN git clone https://github.com/openrov/openrov-proxy proxy && cd proxy/proxy-via-browser && npm install
 
-
+USER rov
 CMD ["/bin/bash", "start.sh"]
