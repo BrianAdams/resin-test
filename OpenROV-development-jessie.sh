@@ -1,4 +1,5 @@
 #!/bin/sh -e
+set -ex
 #
 # Copyright (c) 2014 Robert Nelson <robertcnelson@gmail.com>
 #

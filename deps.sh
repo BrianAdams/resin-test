@@ -1,4 +1,5 @@
 #! /bin/bash
+set -ex
 
 exp_repo_rcnee_jessie_nodejs=enable
 wfile=/etc/apt/sources.list.d/rcn-jessie.list
