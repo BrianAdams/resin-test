@@ -1,1 +1,1 @@
-FROM: badevguru/resin-io-openrov-test
+FROM badevguru/resin-io-openrov-test
