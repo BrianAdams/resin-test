@@ -2,4 +2,4 @@
 FROM resin/beaglebone-node:latest
 #ENV INITSYSTEM on
 #USER root
-CMD /bin/sh -c 'while true; sleep 1000; do'
+CMD /bin/sh -c 'while true;do sleep 1000; done'
